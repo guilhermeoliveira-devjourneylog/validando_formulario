@@ -57,55 +57,77 @@
                 <img src="../img/status-1.png" alt="Etapa um de três" class="formulario__etapas">
                 <h2 class="formulario__titulo-texto">Preencha os campos abaixo para criar sua conta corrente!</h2>
             </div>
-
+            <!-- Vamos selecionar esse formulário por meio desses data attributes data-formulario.-->
             <form class="principal__formulario" data-formulario>
                 <fieldset class="formulario__campo">
                     <label class="campo__etiqueta" for="nome">Nome</label>
+                    <!-- atributo required resultando na obrigatóriedade da inserção de dados nos campos dos inputs-->
+                    <!-- regulando a quantidade de caracteres em cada campo para evitar que a pessoa usuária insira dados incorretos com elemento minlength-->
+                    <!-- acessibilidade para validação de informações do form especificando tipo de input com elemento type-->
                     <input name="nome" id="nome" class="campo__escrita" type="text" minlength="3" required />
                     <span class="mensagem-erro"></span>
                 </fieldset>
-
+                
                 <fieldset class="formulario__campo">
                     <label class="campo__etiqueta" for="email">E-mail</label>
+                    <!-- atributo required resultando na obrigatóriedade da inserção de dados nos campos dos inputs-->
+                    <!-- regulando a quantidade de caracteres em cada campo para evitar que a pessoa usuária insira dados incorretos com elemento minlength-->
+                    <!-- acessibilidade para validação de informações do form especificando tipo de input com elemento type-->
                     <input name="email" id="email" class="campo__escrita" type="email" minlength="4" required />
                     <span class="mensagem-erro"></span>
                 </fieldset>
                 <fieldset class="formulario__campo">
                     <label class="campo__etiqueta" for="rg">RG</label>
+                    <!-- atributo required resultando na obrigatóriedade da inserção de dados nos campos dos inputs-->
+                    <!-- regulando a quantidade de caracteres em cada campo para evitar que a pessoa usuária insira dados incorretos com elemento minlength-->
+                    <!-- acessibilidade para validação de informações do form especificando tipo de input com elemento type-->
                     <input name="rg" id="rg" class="campo__escrita campo__escrita--menor" type="text" required />
                     <span class="mensagem-erro"></span>
                 </fieldset>
                 <fieldset class="formulario__campo">
                     <label class="campo__etiqueta" for="cpf">CPF (apenas números)</label>
+                    <!-- definindo Expressão regular (Regex) padrão da estrutura de dados do input  -->
+                    <!-- atributo required resultando na obrigatóriedade da inserção de dados nos campos dos inputs-->
+                    <!-- regulando a quantidade de caracteres em cada campo para evitar que a pessoa usuária insira dados incorretos com elemento minlength e maxlenght-->
+                    <!-- acessibilidade para validação de informações do form especificando tipo de input com elemento type-->
                     <input name="cpf" id="cpf" class="campo__escrita campo__escrita--menor" required type="text"
-                        minlength="11" maxlength="14" pattern="\d{3}\.?\d{3}\.?\d{3}-?\d{2}" />
+                    minlength="11" maxlength="14" pattern="\d{3}\.?\d{3}\.?\d{3}-?\d{2}" />
                     <span class="mensagem-erro"></span>
                 </fieldset>
                 <fieldset class="formulario__campo">
                     <label class="campo__etiqueta" for="aniversario">Data de nascimento</label>
+                    <!-- atributo required resultando na obrigatóriedade da inserção de dados nos campos dos inputs-->
+                    <!-- regulando a quantidade de caracteres em cada campo para evitar que a pessoa usuária insira dados incorretos com elemento minlength-->
+                    <!-- acessibilidade para validação de informações do form especificando tipo de input com elemento type-->
                     <input name="aniversario" id="aniversario" class="campo__escrita campo__escrita--menor" type="date"
-                        required />
+                    required />
                     <span class="mensagem-erro"></span>
                 </fieldset>
                 <fieldset class="formulario__termos">
+                    <!-- atributo required resultando na obrigatóriedade da inserção de dados nos campos dos inputs-->
+                    <!-- regulando a quantidade de caracteres em cada campo para evitar que a pessoa usuária insira dados incorretos com elemento minlength-->
+                    <!-- acessibilidade para validação de informações do form especificando tipo de input com elemento type-->
                     <input name="termos" class="termos__input" type="checkbox" required>
                     <p class="termos__texto">Li e estou ciente quanto às condições de tratamento dos meus dados conforme
                         descrito na Política
                         de
                         Privacidade do banco.</p>
-                    <span class="mensagem-erro"></span>
-                </fieldset>
-
-                <div>
-                    <input value="Avançar" class="formulario__botao" id="enviar" data-botao-enviar type="submit">
-                    <span class="mensagem-erro"></span>
-                </div>
-            </form>
-
-        </section>
-
-    </main>
-
+                        <span class="mensagem-erro"></span>
+                    </fieldset>
+                    
+                    <div>
+                        <!-- atributo required resultando na obrigatóriedade da inserção de dados nos campos dos inputs-->
+                        <!-- regulando a quantidade de caracteres em cada campo para evitar que a pessoa usuária insira dados incorretos com elemento minlength-->
+                        <!-- acessibilidade para validação de informações do form especificando tipo de input com elemento type-->
+                        <input value="Avançar" class="formulario__botao" id="enviar" data-botao-enviar type="submit">
+                        <span class="mensagem-erro"></span>
+                    </div>
+                </form>
+            
+            </section>
+            
+        </main>
+        
     <footer class="rodape">
         <section class="rodape__empresa">
             <h2 class="rodape__titulo">O MoniBank</h2>
@@ -160,6 +182,7 @@
             <h2 class="rodape__logo"><span class="rodape__logo--negrito">Moni</span>Bank</h2>
         </section>
     </footer>
+    <!--modularização type module cada motivação separadas por arquivos diferentes e todos eles vão se unir neste script em si  -->
     <script src="../js/script.js" type="module"></script>
 </body>
 
